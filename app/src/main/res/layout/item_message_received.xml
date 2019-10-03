@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root_view"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/image_message_profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="8dp"
+            android:layout_gravity="center"
+            android:background="@drawable/profile" />
+
+        <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+    <Custom.CustomTextView
+        android:id="@+id/text_message_name"
+        android:text="Suchi Den"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+       android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        />
+
+    <Custom.CustomTextView
+        android:id="@+id/timestamp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+
+        android:text="11:40 AM"
+        android:textSize="10sp"
+        android:layout_gravity="center"
+       />
+
+        <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+            android:id="@+id/emojicon_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:layout_constraintLeft_toRightOf="@+id/emoji_btn"
+            emojicon:emojiconSize="28sp"
+            tools:ignore="MissingConstraints" />
+    </LinearLayout>
+    </LinearLayout>
+   <LinearLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:background="@drawable/rounded_rectangle_recieved"
+       android:layout_marginLeft="40dp">
+
+    <Custom.CustomTextView
+        android:id="@+id/text_message_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_message_name"
+        android:maxWidth="240dp"
+        android:padding="8dp"
+        android:text="hi, how are you? i am fine what about you???"
+        android:textColor="#ffffff"
+        app:layout_constraintLeft_toRightOf="@+id/image_message_profile"
+        tools:ignore="MissingConstraints" />
+       <ImageView
+           android:id="@+id/emoji_btn"
+           android:layout_width="22dp"
+           android:layout_height="22dp"
+           android:layout_marginTop="4dp"
+           android:background="@drawable/ic_insert_emoticon_black_24dp"
+          android:layout_marginLeft="1dp"
+           android:layout_marginRight="10dp"
+
+           />
+   </LinearLayout>
+
+
+
+</LinearLayout>

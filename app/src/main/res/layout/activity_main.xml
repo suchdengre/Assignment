@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/tittle"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:background="@color/colorPrimary"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp">
+
+            <ImageView
+                android:id="@+id/back_button"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="16dp"
+                android:src="@drawable/left_arrow"
+                android:tint="@color/white" />
+
+            <Custom.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Group Name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/copy"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="16dp"
+                android:src="@drawable/camera"
+                android:tint="@color/white" />
+
+            <ImageView
+                android:id="@+id/call"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:padding="16dp"
+                android:src="@drawable/call"
+                android:tint="@color/white" />
+
+
+        </LinearLayout>
+        <include layout="@layout/item_message_sent" />
+
+        <include layout="@layout/item_message_received" />
+
+        <include layout="@layout/item_message_sent" />
+
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:elevation="4dp"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:background="#FFF"
+            android:orientation="horizontal"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            >
+
+            <ImageButton
+                android:id="@+id/chat_add_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:alpha="0.5"
+                android:background="@drawable/plus"
+                android:padding="16dp"
+                android:layout_gravity="center"
+                android:backgroundTint="#c262a6"
+               />
+
+            <Custom.CustomEditText
+                android:id="@+id/chat_message_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/linearLayout"
+                android:layout_weight="8"
+                android:background="@android:color/white"
+                android:ems="10"
+                android:hint="Type a message here"
+                android:inputType="textPersonName"
+                android:paddingLeft="10dp"
+                android:paddingTop="14dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="12dp" />
+
+            <ImageButton
+                android:id="@+id/mic"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:alpha="0.5"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/microphone"
+                android:padding="16dp" />
+            <ImageButton
+                android:id="@+id/camera"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:alpha="0.5"
+                android:background="@drawable/camera"
+                android:padding="16dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
